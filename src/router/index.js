@@ -97,6 +97,11 @@ export const constantRouterMap = [
       path: 'apiExtBanner/list',
       component: () => import('@/views/apiExtBanner/list'),
       meta: {title: 'Banner管理', icon: 'banner'}
+    },{
+      name: 'Json接口数据',
+      path: 'apiExtJson/list',
+      component: () => import('@/views/apiExtJson/list'),
+      meta: {title: 'Json数据管理', icon: 'json'}
     }]
   },
   {
@@ -142,6 +147,19 @@ export const constantRouterMap = [
         path: 'apiExtPage/add',
         component: () => import('@/views/apiExtPage/add'),
         meta: {title: '添加单页', icon: 'page'},
+        hidden: true
+      },
+      {
+        name: '公告管理',
+        path: 'apiExtNotice/list',
+        component: () => import('@/views/apiExtNotice/list'),
+        meta: {title: '公告管理', icon: 'gonggao'}
+      },
+      {
+        name: '添加公告',
+        path: 'apiExtNotice/add',
+        component: () => import('@/views/apiExtNotice/add'),
+        meta: {title: '添加公告', icon: 'gonggao'},
         hidden: true
       }]
   },
@@ -229,11 +247,18 @@ export const constantRouterMap = [
       path: 'extDiscountsCoupon/list',
       component: () => import('@/views/extDiscountsCoupon/list'),
       meta: {title: '优惠券规则', icon: 'juan'}
-    },{
+    },
+    {
       name: '优惠券管理',
       path: 'extDiscountsCouponUser/list',
       component: () => import('@/views/extDiscountsCoupon/extDiscountsCouponUser'),
       meta: {title: '优惠券管理', icon: 'juan'}
+    },
+    {
+      name: '积分券管理',
+      path: 'userScoreTicket/list',
+      component: () => import('@/views/userScoreTicket/list'),
+      meta: {title: '积分券管理', icon: 'score'}
     }]
   },
   {
