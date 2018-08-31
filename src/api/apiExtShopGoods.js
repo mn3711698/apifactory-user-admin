@@ -1,10 +1,14 @@
 import request from '@/utils/request'
 
-export function fetchDataList(data) {
+export function fetchDataList(page, pageSize, data) {
   return request({
     url: '/user/apiExtShopGoods/list',
     method: 'post',
-    data: {...data}
+    data: {
+      page,
+      pageSize,
+      ...data
+    }
   })
 }
 
@@ -36,6 +40,14 @@ export function delData(id) {
 export function modifyNumberOrders(data) {
   return request({
     url: '/user/apiExtShopGoods/modify/numberOrders',
+    method: 'post',
+    data: data
+  })
+}
+
+export function modifyNumberSells(data) {
+  return request({
+    url: '/user/apiExtShopGoods/modify/numberSells',
     method: 'post',
     data: data
   })

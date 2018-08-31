@@ -57,16 +57,26 @@ export const constantRouterMap = [
     redirect: '/user/centerUserResourceBundle/list',
     meta: {title: '工厂设置', icon: 'setting'},
     children: [{
-      name: '我的资源包',
-      path: 'list',
-      component: () => import('@/views/centerUserResourceBundle/list'),
-      meta: {title: '我的资源包', icon: 'ziyuan'}
-    },
+        name: '我的资源包',
+        path: 'list',
+        component: () => import('@/views/centerUserResourceBundle/list'),
+        meta: {title: '我的资源包', icon: 'ziyuan'}
+      },
+      // {
+      //   path: 'external-link',
+      //   component: Layout,
+      //   children: [
+      //     {
+      //       path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
+      //       meta: { title: 'externalLink', icon: 'link' }
+      //     }
+      //   ]
+      // },
       {
-        name: '我的资源包2',
-        path: 'dashboard3',
-        component: () => import('@/views/dashboard/index'),
-        meta: {title: '我的资源包2', icon: 'setting'}
+        name: '我的资源包',
+        path: 'list',
+        component: () => import('@/views/centerUserResourceBundle/list'),
+        meta: {title: '我的资源包', icon: 'ziyuan'}
       }]
   },
   {
@@ -80,6 +90,11 @@ export const constantRouterMap = [
       path: 'apiExtConfig/list',
       component: () => import('@/views/apiExtConfig/list'),
       meta: {title: '系统参数', icon: 'setting'}
+    },{
+      name: '签到积分规则',
+      path: 'apiExtUserScoreSignRule/list',
+      component: () => import('@/views/apiExtUserScoreSignRule/list'),
+      meta: {title: '签到积分规则', icon: 'scoreSignRule'}
     },{
       name: '上传文件管理',
       path: 'apiExtDfs/list',
