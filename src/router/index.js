@@ -73,10 +73,10 @@ export const constantRouterMap = [
       //   ]
       // },
       {
-        name: '我的资源包',
+        name: '我的资源包2',
         path: 'list',
         component: () => import('@/views/centerUserResourceBundle/list'),
-        meta: {title: '我的资源包', icon: 'ziyuan'}
+        meta: {title: '我的资源包2', icon: 'ziyuan'}
       }]
   },
   {

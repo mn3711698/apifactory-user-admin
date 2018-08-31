@@ -48,7 +48,9 @@
       </el-table-column>
       <el-table-column prop="statusStr" label="状态">
         <template slot-scope="scope">
-         {{scope.row.statusStr}}
+          <el-tag
+            :type="scope.row.statusStr === '待发货' ? 'primary' : scope.row.statusStr === '交易成功' ? 'success' : 'warning'"
+            disable-transitions>{{scope.row.statusStr}}</el-tag>
          <el-button style="color:red" v-if="scope.row.hasRefund" type="text" @click="orderDetail(scope.row.id)">有退款</el-button>
         </template>
       </el-table-column>
